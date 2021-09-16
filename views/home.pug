@@ -1,0 +1,42 @@
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    meta(name='description' content='')
+    meta(name='author' content='Dashboard')
+    meta(name='keyword' content='Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina')
+    title Bienvenido Invocador
+    style 
+      include ../lib/bootstrap/css/bootstrap.min.css
+      include ../css/zabuto_calendar.css
+      include ../lib/gritter/css/jquery.gritter.css
+      include ../css/style.css
+      include ../css/style-responsive.css
+section#container
+  header.header.black-bg
+    a.logo(href='/')
+      b
+        span RulasVrdz 
+
+section#main-content
+    section.wrapper
+      .row.mt
+        .col-lg-12
+          .form-panel
+            h4.mb
+              i.fa.fa-angle-right
+              |  Bienvenido
+            form.form-horizontal.style-form(action='/reversegeocoding',method='post')
+              .form-group
+                label.col-sm-2.col-sm-2.control-label Latitud:
+                .col-sm-10
+                  input.form-control(type='text', name='lat')
+                  br
+                label.col-sm-2.col-sm-2.control-label Logitud:
+                .col-sm-10
+                  input.form-control(type='text', name='long')
+                  br
+                  button.btn.btn-theme(type='submit', value='Submit') Entrar
+
+include footer.pug
+    

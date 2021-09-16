@@ -1,0 +1,40 @@
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    meta(name='description' content='')
+    meta(name='author' content='Dashboard')
+    meta(name='keyword' content='Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina')
+    title Bienvenido Invocador
+    style 
+      include ../lib/bootstrap/css/bootstrap.min.css
+      include ../css/zabuto_calendar.css
+      include ../lib/gritter/css/jquery.gritter.css
+      include ../css/style.css
+      include ../css/style-responsive.css
+section#container
+  header.header.black-bg
+    a.logo(href='/')
+      b
+        span RulasVrdz 
+
+section#main-content
+  section.wrapper.site-min-height
+    .row.mt
+      .col-lg-12
+        .row.content-panel
+          .col-md-4.profile-text
+          .col-md-4.centered
+            .profile-pic
+              p #[b= `${calle}`], ##[b= `${numero}`]
+
+footer.site-footer
+  .text-center
+    p Url usada: 
+    p Info: #[b= `${url}`]
+
+    .credits
+      | Created with Dashio template by 
+      a(href='https://templatemag.com/') TemplateMag
+
+include footer.pug
